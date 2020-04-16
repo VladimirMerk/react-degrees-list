@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
   module: {
     rules: [
@@ -10,6 +12,7 @@ module.exports = {
     ]
   },
   devServer: {
+    contentBase: path.join(__dirname, 'dist'),
     port: 1234,
     host: '0.0.0.0'
   }
